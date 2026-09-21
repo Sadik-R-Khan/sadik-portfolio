@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sadik R. Khan | Software &amp; Backend Developer</title>
+    <meta name="description" content="Portfolio of Sadik R. Khan — B.Tech Computer Science &amp; Engineering graduate specializing in Java, Spring Boot, RESTful APIs, MySQL, and AWS Cloud Deployment." />
+    <meta name="keywords" content="Sadik Khan, Sadik R. Khan, Software Engineer, Backend Developer, Java, Spring Boot, AWS, Angular, MySQL, Portfolio" />
+    <meta name="author" content="Sadik R. Khan" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sadik R. Khan | Software &amp; Backend Developer" />
+    <meta property="og:description" content="B.Tech Computer Science &amp; Engineering graduate specializing in Java, Spring Boot, RESTful APIs, and AWS Cloud." />
+    <meta property="og:image" content="./assets/images/sadik-khan.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Pre-hydration theme initialization & scroll-to-top on reload -->
+    <script>
+      (function() {
+        // Prevent browser from restoring scrolled down position on refresh
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
+        // Clear hash on fresh reload so browser doesn't automatically jump to contact
+        if (window.location.hash && window.location.hash !== '#home') {
+          history.replaceState(null, document.title, window.location.pathname + window.location.search);
+        }
+        window.scrollTo(0, 0);
+
+        // Pre-hydration theme setup: default strictly to 'light' unless user chose 'dark'
+        try {
+          var saved = localStorage.getItem('portfolio_theme') || localStorage.getItem('portfolio_user_theme');
+          if (saved === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#FAFAFA] dark:bg-[#090D16] text-slate-800 dark:text-slate-100 antialiased selection:bg-blue-600 selection:text-white font-sans min-h-screen transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="./src/main.jsx"></script>
+  </body>
+</html>
