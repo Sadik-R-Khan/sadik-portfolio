@@ -29,12 +29,12 @@ export default function Skills() {
     },
     {
       id: 'cloud',
-      title: 'Cloud & DevOps',
+      title: 'Cloud',
       icon: Cloud,
       iconColor: 'text-amber-600 dark:text-amber-400',
       badgeBg: 'bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border-amber-100 dark:border-amber-800/60',
-      items: skills.cloudDevOps,
-      summary: 'AWS architecture, containerization with Docker, and CI/CD version control.'
+      items: skills.cloud || skills.cloudDevOps,
+      summary: 'AWS cloud architecture, EC2 compute deployment, S3 storage, and managed RDS.'
     },
     {
       id: 'database',
@@ -81,16 +81,16 @@ export default function Skills() {
   }, [activeCategory, searchQuery]);
 
   return (
-    <section id="skills" className="py-20 md:py-28 border-t border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-[#070B14] transition-colors duration-200">
+    <section id="skills" className="py-14 sm:py-20 md:py-28 border-t border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-[#070B14] transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 text-xs font-mono font-semibold uppercase tracking-wider mb-3 border border-blue-100 dark:border-blue-800/60">
               Technical Stack
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
               Skills &amp; Technologies
             </h2>
             <p className="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -121,7 +121,7 @@ export default function Skills() {
         </div>
 
         {/* Category Filter Tabs */}
-        <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none">
+        <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
           <button
             onClick={() => setActiveCategory('all')}
             className={`px-3.5 py-1.5 rounded-lg text-xs font-medium font-mono whitespace-nowrap transition-all ${
@@ -162,7 +162,7 @@ export default function Skills() {
               return (
                 <div 
                   key={cat.id}
-                  className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-800 p-6 shadow-2xs hover:shadow-xs hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between group"
+                  className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-800 p-5 sm:p-6 shadow-2xs hover:shadow-xs hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between group"
                 >
                   <div>
                     {/* Category Header */}

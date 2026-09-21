@@ -1,16 +1,16 @@
 export const portfolioData = {
   personal: {
     name: "Sadik R. Khan",
-    title: "Software & Backend Developer",
+    title: "Full Stack Software Developer",
     degree: "B.Tech in Computer Science and Engineering",
-    tagline: "Building robust backend systems, RESTful services, and cloud-deployed applications with Java, Spring Boot, and modern web technologies.",
+    tagline: "Building full-stack applications, responsive web frontends, and backend systems with Java, Spring Boot, Angular, and AWS.",
     location: "Pune, Maharashtra, India",
     phone: "+91 80802 59949",
     phoneClean: "+918080259949",
     email: "sadikrk.official@gmail.com",
     avatar: "./assets/images/sadik-khan.png",
     resumeUrl: "./assets/Sadik_Khan_Resume.pdf",
-    availability: "Available for full-time Software Engineer & Backend roles",
+    availability: "Available for full-time Full Stack & Software Developer roles",
     socials: {
       github: "https://github.com/Sadik-R-Khan",
       linkedin: "https://www.linkedin.com/in/sadik-rafe-khan/",
@@ -54,7 +54,7 @@ export const portfolioData = {
       { name: "Transactional Integrity", level: "ACID & @Transactional" },
       { name: "Redis", level: "In-Memory Caching & TTL" },
     ],
-    cloudDevOps: [
+    cloud: [
       { name: "AWS EC2", level: "Compute Deployment" },
       { name: "AWS S3", level: "Object Storage & Pre-signed URLs" },
       { name: "AWS RDS", level: "Managed Cloud DB" },

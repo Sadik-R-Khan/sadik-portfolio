@@ -139,12 +139,12 @@ export default function Navbar() {
         </div>
 
         {/* Mobile controls: Theme toggle + Hamburger */}
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden">
           <button
             onClick={toggleTheme}
             type="button"
-            className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-colors cursor-pointer"
-            aria-label="Toggle theme"
+            className="p-2 sm:p-2.5 min-w-[38px] min-h-[38px] flex items-center justify-center rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-colors cursor-pointer"
+            aria-label={theme === 'dark' ? "Switch to Light mode" : "Switch to Dark mode"}
             title={theme === 'dark' ? "Switch to Light mode" : "Switch to Dark mode"}
           >
             {theme === 'dark' ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-slate-700" />}
@@ -152,7 +152,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            className="p-2 sm:p-2.5 min-w-[38px] min-h-[38px] flex items-center justify-center rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -162,7 +162,7 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       {isOpen && (
-        <div className="lg:hidden bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 pt-3 pb-6 space-y-2 animate-fade-in shadow-lg">
+        <div className="lg:hidden bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 pt-3 pb-6 space-y-2 animate-fade-in shadow-lg max-h-[calc(100vh-4.5rem)] overflow-y-auto">
           <nav className="flex flex-col space-y-1">
             {navLinks.map((link) => (
               <a

@@ -15,19 +15,19 @@ export default function Certifications() {
   const { certifications } = portfolioData;
 
   return (
-    <section id="certifications" className="py-20 md:py-28 border-t border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-[#070B14] transition-colors duration-200">
+    <section id="certifications" className="py-14 sm:py-20 md:py-28 border-t border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-[#070B14] transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col items-start mb-14">
+        <div className="flex flex-col items-start mb-8 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 text-xs font-mono font-semibold uppercase tracking-wider mb-3 border border-amber-200/80 dark:border-amber-800/60">
             <Award className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
             Verified Credentials
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Industry Certifications
           </h2>
-          <p className="mt-3 text-base text-slate-600 dark:text-slate-400 max-w-2xl">
+          <p className="mt-2 sm:mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-2xl">
             Validated knowledge in cloud architecture, security, distributed services, and full-stack software development.
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function Certifications() {
           {certifications.map((cert, idx) => (
             <div 
               key={idx}
-              className={`rounded-2xl p-6 sm:p-7 transition-all flex flex-col justify-between ${
+              className={`rounded-2xl p-5 sm:p-7 transition-all flex flex-col justify-between ${
                 cert.isPrimary 
                   ? 'bg-gradient-to-b from-white to-amber-50/30 dark:from-slate-900 dark:to-amber-950/20 border-2 border-amber-300 dark:border-amber-700/80 shadow-md relative overflow-hidden' 
                   : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs'

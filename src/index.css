@@ -5,11 +5,14 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw;
   }
   body {
     background-color: #FAFAFA;
     color: #1E293B;
     overflow-x: hidden;
+    max-width: 100vw;
     transition: background-color 0.25s ease, color 0.25s ease;
   }
   html.dark,

@@ -96,10 +96,10 @@ export default function LeetCodeSection() {
   const quickCommands = ['help', 'skills', 'projects', 'aws', 'contact', 'clear'];
 
   return (
-    <section className="py-16 md:py-20 border-t border-slate-200/80 dark:border-slate-800 bg-white dark:bg-[#0A0F1D] transition-colors duration-200">
+    <section className="py-14 sm:py-16 md:py-20 border-t border-slate-200/80 dark:border-slate-800 bg-white dark:bg-[#0A0F1D] transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="bg-slate-50 dark:bg-slate-900/90 rounded-3xl p-8 sm:p-10 lg:p-12 text-slate-900 dark:text-white relative overflow-hidden shadow-xs border border-slate-200/90 dark:border-slate-800">
+        <div className="bg-slate-50 dark:bg-slate-900/90 rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 text-slate-900 dark:text-white relative overflow-hidden shadow-xs border border-slate-200/90 dark:border-slate-800">
           {/* Subtle background decoration */}
           <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 bg-blue-600/5 dark:bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -112,7 +112,7 @@ export default function LeetCodeSection() {
                 Continuous Problem Solving
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-3">
+              <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-3">
                 Data Structures &amp; Algorithms Practice
               </h2>
 
@@ -125,7 +125,7 @@ export default function LeetCodeSection() {
                 {leetcode.focusAreas.map((area, idx) => (
                   <div 
                     key={idx}
-                    className="p-2.5 rounded-lg bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs font-mono text-slate-700 dark:text-slate-200 flex items-center gap-2 shadow-2xs hover:border-amber-400/40 transition-colors"
+                    className="p-2 sm:p-2.5 rounded-lg bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs font-mono text-slate-700 dark:text-slate-200 flex items-center gap-2 shadow-2xs hover:border-amber-400/40 transition-colors"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-500 dark:bg-amber-400 shrink-0"></span>
                     <span className="truncate">{area}</span>
@@ -138,7 +138,7 @@ export default function LeetCodeSection() {
                 href={leetcode.profileUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-sm transition-all shadow-md active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-xs sm:text-sm transition-all shadow-md active:scale-[0.98] w-full sm:w-auto text-center"
               >
                 <LeetCodeIcon className="w-4 h-4" />
                 <span>Visit LeetCode Profile (@{leetcode.username})</span>
@@ -148,7 +148,7 @@ export default function LeetCodeSection() {
 
             {/* Right: Interactive Terminal */}
             <div className="lg:col-span-6">
-              <div className="rounded-2xl bg-slate-950 text-slate-100 border border-slate-800 p-5 font-mono text-xs shadow-2xl flex flex-col h-[360px] justify-between">
+              <div className="rounded-2xl bg-slate-950 text-slate-100 border border-slate-800 p-4 sm:p-5 font-mono text-xs shadow-2xl flex flex-col h-[340px] sm:h-[360px] justify-between">
                 
                 {/* Terminal Header */}
                 <div className="flex items-center justify-between pb-3 border-b border-slate-800/80 text-slate-400 shrink-0">
@@ -158,9 +158,9 @@ export default function LeetCodeSection() {
                       <span className="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
                       <span className="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
                     </div>
-                    <span className="ml-2 text-xs text-slate-300 font-medium">sadik@developer-shell:~</span>
+                    <span className="ml-2 text-[11px] sm:text-xs text-slate-300 font-medium truncate max-w-[130px] xs:max-w-[200px] sm:max-w-none">sadik@developer-shell:~</span>
                   </div>
-                  <span className="text-[10px] text-emerald-400 flex items-center gap-1">
+                  <span className="text-[10px] text-emerald-400 flex items-center gap-1 shrink-0">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                     Live Shell
                   </span>

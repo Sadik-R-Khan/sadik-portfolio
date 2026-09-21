@@ -54,16 +54,16 @@ export default function FeaturedProjects() {
   });
 
   return (
-    <section id="projects" className="py-20 md:py-28 border-t border-slate-200/80 dark:border-slate-800 bg-white dark:bg-[#0A0F1D] transition-colors duration-200">
+    <section id="projects" className="py-14 sm:py-20 md:py-28 border-t border-slate-200/80 dark:border-slate-800 bg-white dark:bg-[#0A0F1D] transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header & Filter Controls */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-12">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 text-xs font-mono font-semibold uppercase tracking-wider mb-3 border border-blue-100 dark:border-blue-800/60">
               Portfolio Showcase
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
               Featured Projects &amp; Systems
             </h2>
             <p className="mt-2 text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-2xl">
@@ -72,10 +72,10 @@ export default function FeaturedProjects() {
           </div>
 
           {/* Interactive Project Filter Pills */}
-          <div className="flex items-center gap-1.5 p-1 bg-slate-100 dark:bg-slate-900 rounded-xl self-start md:self-auto border border-slate-200 dark:border-slate-800">
+          <div className="flex items-center gap-1.5 p-1 bg-slate-100 dark:bg-slate-900 rounded-xl self-start md:self-auto border border-slate-200 dark:border-slate-800 max-w-full overflow-x-auto scrollbar-none">
             <button
               onClick={() => setProjectFilter('all')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition-all ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium whitespace-nowrap shrink-0 transition-all ${
                 projectFilter === 'all'
                   ? 'bg-white dark:bg-blue-600 text-slate-900 dark:text-white shadow-xs font-semibold'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -85,7 +85,7 @@ export default function FeaturedProjects() {
             </button>
             <button
               onClick={() => setProjectFilter('cloud')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition-all ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium whitespace-nowrap shrink-0 transition-all ${
                 projectFilter === 'cloud'
                   ? 'bg-white dark:bg-blue-600 text-blue-700 dark:text-white shadow-xs font-semibold'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -95,7 +95,7 @@ export default function FeaturedProjects() {
             </button>
             <button
               onClick={() => setProjectFilter('backend')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition-all ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium whitespace-nowrap shrink-0 transition-all ${
                 projectFilter === 'backend'
                   ? 'bg-white dark:bg-blue-600 text-blue-700 dark:text-white shadow-xs font-semibold'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -107,7 +107,7 @@ export default function FeaturedProjects() {
         </div>
 
         {/* Project Cards List */}
-        <div className="space-y-16">
+        <div className="space-y-10 sm:space-y-16">
           {filteredProjects.map((project, idx) => {
             const isReversed = idx % 2 === 1;
             const currentTab = activeTabs[project.id] || 'architecture';
@@ -115,12 +115,12 @@ export default function FeaturedProjects() {
             return (
               <div 
                 key={project.id}
-                className="bg-slate-50/70 dark:bg-slate-900/60 rounded-3xl border border-slate-200/90 dark:border-slate-800 overflow-hidden shadow-2xs hover:shadow-md transition-all duration-300 group/card"
+                className="bg-slate-50/70 dark:bg-slate-900/60 rounded-2xl sm:rounded-3xl border border-slate-200/90 dark:border-slate-800 overflow-hidden shadow-2xs hover:shadow-md transition-all duration-300 group/card"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                   
                   {/* Visual / Screenshot / Diagram Column */}
-                  <div className={`lg:col-span-6 flex flex-col justify-center bg-slate-100/70 dark:bg-slate-950/60 p-6 sm:p-8 lg:p-10 border-b lg:border-b-0 ${isReversed ? 'lg:order-last lg:border-l' : 'lg:border-r'} border-slate-200/70 dark:border-slate-800`}>
+                  <div className={`lg:col-span-6 flex flex-col justify-center bg-slate-100/70 dark:bg-slate-950/60 p-4 sm:p-6 lg:p-10 border-b lg:border-b-0 ${isReversed ? 'lg:order-last lg:border-l' : 'lg:border-r'} border-slate-200/70 dark:border-slate-800`}>
                     {project.hasImage ? (
                       <div 
                         onClick={() => openModal(project.image, `${project.title} — System Architecture & UI Preview`)}
@@ -176,7 +176,7 @@ export default function FeaturedProjects() {
                   </div>
 
                   {/* Project Details Column */}
-                  <div className="lg:col-span-6 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+                  <div className="lg:col-span-6 p-5 sm:p-8 lg:p-10 flex flex-col justify-between">
                     <div>
                       {/* Badge & Title */}
                       <div className="flex items-center gap-2.5 mb-2">
@@ -185,7 +185,7 @@ export default function FeaturedProjects() {
                         </span>
                       </div>
 
-                      <h3 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight group-hover/card:text-blue-600 dark:group-hover/card:text-blue-400 transition-colors">
+                      <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white tracking-tight group-hover/card:text-blue-600 dark:group-hover/card:text-blue-400 transition-colors">
                         {project.title}
                       </h3>
 
@@ -198,10 +198,10 @@ export default function FeaturedProjects() {
                       </p>
 
                       {/* Interactive Section Switcher Tabs */}
-                      <div className="flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-2 mb-4 text-xs font-mono font-medium">
+                      <div className="flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-2 mb-4 text-xs font-mono font-medium overflow-x-auto scrollbar-none">
                         <button
                           onClick={() => handleTabChange(project.id, 'architecture')}
-                          className={`pb-1 px-1 transition-all border-b-2 -mb-[9px] ${
+                          className={`pb-1 px-1 whitespace-nowrap shrink-0 transition-all border-b-2 -mb-[9px] ${
                             currentTab === 'architecture'
                               ? 'border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 font-bold'
                               : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200'
@@ -211,7 +211,7 @@ export default function FeaturedProjects() {
                         </button>
                         <button
                           onClick={() => handleTabChange(project.id, 'problem')}
-                          className={`pb-1 px-1 transition-all border-b-2 -mb-[9px] ${
+                          className={`pb-1 px-1 whitespace-nowrap shrink-0 transition-all border-b-2 -mb-[9px] ${
                             currentTab === 'problem'
                               ? 'border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 font-bold'
                               : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200'

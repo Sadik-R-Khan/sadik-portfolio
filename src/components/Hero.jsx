@@ -26,37 +26,37 @@ export default function Hero() {
   const { personal } = portfolioData;
 
   return (
-    <section id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-[#FAFAFA] dark:bg-[#090D16] bg-radial-gradient transition-colors duration-200">
+    <section id="home" className="relative pt-24 pb-12 sm:pt-28 sm:pb-16 md:pt-36 md:pb-24 overflow-hidden bg-[#FAFAFA] dark:bg-[#090D16] bg-radial-gradient transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
           {/* Text Content (Left) */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
             {/* Status Pills */}
-            <div className="inline-flex flex-wrap items-center gap-2 mb-6">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-medium rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700">
-                <GraduationCap className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-                B.Tech Computer Science &amp; Eng.
+            <div className="inline-flex flex-wrap items-center gap-2 mb-5 sm:mb-6">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] sm:text-xs font-mono font-medium rounded-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700">
+                <GraduationCap className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
+                <span>B.Tech Computer Science &amp; Eng.</span>
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-medium rounded-full bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border border-amber-200/80 dark:border-amber-800/60">
-                <Award className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
-                AWS Cloud Practitioner (Score: 914)
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] sm:text-xs font-mono font-medium rounded-full bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border border-amber-200/80 dark:border-amber-800/60">
+                <Award className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
+                <span>AWS Cloud Practitioner (Score: 914)</span>
               </span>
             </div>
 
             {/* Greeting & Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.1] mb-4">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.15] sm:leading-[1.1] mb-3 sm:mb-4">
               Hi, I’m <span className="text-blue-600 dark:text-blue-400 inline-block">{personal.name}</span>
             </h1>
 
-            <p className="text-lg sm:text-xl font-medium text-slate-700 dark:text-slate-300 mb-4">
-              Computer Science &amp; Engineering Graduate • Aspiring Backend Developer
+            <p className="text-base sm:text-xl font-medium text-slate-700 dark:text-slate-300 mb-3 sm:mb-4">
+              Computer Science &amp; Engineering Graduate • Full Stack Software Developer
             </p>
 
             {/* Concise Mission Statement */}
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8 max-w-2xl font-normal">
-              Building backend systems, full-stack applications, and practical software solutions with Java, Spring Boot, and modern web technologies. Focused on high-throughput REST APIs, concurrency control, and cloud deployments on AWS.
+            <p className="font-body text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-[1.8] sm:leading-[1.85] tracking-[0.015em] [word-spacing:0.06em] mb-8 max-w-2xl font-normal">
+              Engineering end-to-end full-stack applications and software solutions with Java, Spring Boot, and Angular. Experienced in building responsive web frontends, RESTful APIs, database architectures, and cloud deployments on AWS.
             </p>
 
             {/* Primary Action Buttons */}
@@ -135,8 +135,8 @@ export default function Hero() {
           </div>
 
           {/* Photograph / Seamlessly Blended Developer Portrait (Right) */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[360px] sm:max-w-[400px]">
+          <div className="lg:col-span-5 flex justify-center lg:justify-end mt-4 lg:mt-0">
+            <div className="relative w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[360px] lg:max-w-[400px]">
               
               {/* Subtle ambient glow matching the image's blue developer atmosphere */}
               <div className="absolute -inset-2 bg-gradient-to-tr from-blue-600/20 via-indigo-500/15 to-transparent rounded-[2.5rem] blur-2xl opacity-60 dark:opacity-80 transition-opacity duration-700 pointer-events-none"></div>

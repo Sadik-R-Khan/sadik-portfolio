@@ -43,10 +43,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 border-t border-slate-200/80 dark:border-slate-800 bg-white dark:bg-[#0A0F1D] transition-colors duration-200">
+    <section id="contact" className="py-14 sm:py-20 md:py-28 border-t border-slate-200/80 dark:border-slate-800 bg-white dark:bg-[#0A0F1D] transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="bg-slate-50/70 dark:bg-slate-900/70 rounded-3xl border border-slate-200/90 dark:border-slate-800 p-8 sm:p-12 lg:p-16 shadow-xs">
+        <div className="bg-slate-50/70 dark:bg-slate-900/70 rounded-2xl sm:rounded-3xl border border-slate-200/90 dark:border-slate-800 p-5 sm:p-10 lg:p-16 shadow-xs">
           <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
             
             {/* Header Tag */}
@@ -54,19 +54,19 @@ export default function Contact() {
               Get in Touch
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-3 sm:mb-4">
               Let’s Build Something.
             </h2>
 
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl mb-10 font-normal">
+            <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl mb-8 sm:mb-10 font-normal">
               I’m open to software development opportunities, freelance projects, and conversations around building useful products.
             </p>
 
             {/* Direct Contact Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-10 text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-8 sm:mb-10 text-left">
               
               {/* Email Card */}
-              <div className="bg-white dark:bg-slate-800/90 p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs hover:border-blue-300 dark:hover:border-blue-500 transition-colors flex flex-col justify-between">
+              <div className="bg-white dark:bg-slate-800/90 p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs hover:border-blue-300 dark:hover:border-blue-500 transition-colors flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs font-mono font-bold uppercase text-slate-400 dark:text-slate-500 tracking-wider">
@@ -76,7 +76,7 @@ export default function Contact() {
                   </div>
                   <a 
                     href={`mailto:${personal.email}`}
-                    className="text-base sm:text-lg font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors break-all"
+                    className="text-sm sm:text-base md:text-lg font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors break-all"
                   >
                     {personal.email}
                   </a>
@@ -111,7 +111,7 @@ export default function Contact() {
               </div>
 
               {/* Phone Card */}
-              <div className="bg-white dark:bg-slate-800/90 p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs hover:border-blue-300 dark:hover:border-blue-500 transition-colors flex flex-col justify-between">
+              <div className="bg-white dark:bg-slate-800/90 p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xs hover:border-blue-300 dark:hover:border-blue-500 transition-colors flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs font-mono font-bold uppercase text-slate-400 dark:text-slate-500 tracking-wider">
@@ -121,7 +121,7 @@ export default function Contact() {
                   </div>
                   <a 
                     href={`tel:${personal.phoneClean}`}
-                    className="text-base sm:text-lg font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    className="text-sm sm:text-base md:text-lg font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   >
                     {personal.phone}
                   </a>
