@@ -1,6 +1,6 @@
 # Sadik R. Khan — Developer Portfolio Website
 
-A modern, minimal, and responsive developer portfolio website for **Sadik R. Khan**, Computer Science & Engineering graduate and Software/Backend Developer.
+A modern, minimal, and responsive developer portfolio website .
 
 Built with **React 18**, **Vite**, **Tailwind CSS**, and **Lucide Icons**.
 
